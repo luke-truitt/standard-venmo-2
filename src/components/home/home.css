@@ -1,0 +1,108 @@
+.home-c0 {
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.home-c1 {
+  width: 100%;
+  max-width: 550px;
+  margin-left: 4rem;
+  margin-right: -2rem;
+  justify-content: center;
+  background-color: transparent;
+}
+h2.home-title {
+  margin-bottom: 2rem;
+  text-align: left;
+  line-height: 4rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+span.home-web-button-text {
+  font-size: 1rem;
+}
+p.home-subtitle-lower {
+  text-align: left;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.4rem;
+}
+p.home-subtitle-upper {
+  text-align: left;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+div.home-c1.row-container > div > div > div > fieldset {
+  border-color: #283596;
+}
+
+span.home-mobile-button-text {
+  display: none;
+}
+.home-label {
+  padding-bottom: 8vh;
+}
+img.home-ben {
+  height: auto;
+  max-width: 50%;
+  align-self: flex-end;
+  z-index: -5;
+  bottom: 0;
+}
+span.teal-highlight {
+  background-position-y: 95% !important;
+}
+.home-c1 > div.embedded-email-input-container {
+  margin-bottom: 3rem;
+}
+
+div.home-c1.row-container > div > div > div > fieldset > legend > span {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 800px) {
+  span.teal-highlight {
+    background-position-y: 95% !important;
+    background-size: auto 20%;
+  }
+  div.home-c1 {
+    margin: auto;
+    width: 90%;
+  }
+  div.home-c0 {
+    padding-top: 7rem;
+    flex-direction: column;
+    height: auto;
+    overflow-y: scroll;
+  }
+
+  h2.home-title {
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+  p.home-subtitle-lower {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .home-ben {
+    margin: auto;
+    margin-top: 2rem;
+    min-width: 100%;
+  }
+  span.home-web-button-text {
+    display: none;
+  }
+  span.home-mobile-button-text {
+    display: block;
+    font-size: 1rem;
+  }
+}

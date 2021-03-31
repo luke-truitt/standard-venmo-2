@@ -1,0 +1,144 @@
+.single-select-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button.single-select-button {
+  background-color: #ffffff;
+  border: 1px solid #c6cacc;
+  font-weight: normal;
+  width: 100%;
+  color: #6d6d6d;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
+}
+.form-container > .form-item-container {
+  margin-bottom: 0rem;
+}
+button.single-select-button:hover {
+  background-color: #d8dbe8;
+}
+button.selected {
+  background-color: #d8dbe8;
+  border: 1px solid #283593;
+  font-weight: normal;
+  color: #6d6d6d;
+}
+h6.form-item-question {
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+span.form-item-description {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 1.2rem;
+}
+.form-item-container {
+  padding-bottom: 2rem;
+}
+.double-input-container {
+  width: 100%;
+}
+
+div.double-input-container > *:first-child {
+  margin-right: 0.5rem;
+  flex: 1;
+}
+div.double-input-container > *:last-child {
+  margin-left: 0.5rem;
+  flex: 1;
+}
+div.account-page-c1-right
+  > div
+  > div.MuiPaper-root.MuiCard-root.account-page-card.referral-card.MuiPaper-rounded
+  > div
+  > div
+  > div
+  > div.referral-card-email-container.column-container
+  > div
+  > label {
+  top: 0;
+  font-size: 0.875rem;
+}
+
+h2.form-title {
+  padding-bottom: 3vh;
+  font-size: 2.5em;
+  height: auto;
+}
+div.form-item-container.column-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+div.form-item-container.column-container > * {
+  width: 50%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+div.form-item-container.column-container > *:only-child {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+div.form-item-container.column-container > *:first-child {
+  margin-right: 0.5rem;
+  margin-left: 0rem;
+}
+div.form-item-container.column-container > *:last-child {
+  margin-left: 0.5rem;
+  margin-right: 0rem;
+}
+
+div.form-item-container > .form-item-text-field {
+  width: 100%;
+  background-color: white;
+}
+div.form-container {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  button.single-select-button {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .single-select-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .single-select-button-container > button:first-child {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .single-select-button-container > button:last-child {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .form-title {
+    height: 10vh;
+  }
+}
+
+.embedded-email-input-container > * {
+  align-self: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

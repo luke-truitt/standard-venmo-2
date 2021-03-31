@@ -1,0 +1,121 @@
+.contact-page-c1-left {
+  width: 50%;
+  background-image: url("./../../images/bg/bg-pattern-half.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: auto;
+}
+
+.contact-page-c1-right {
+  width: 100%;
+  background-color: #f6f6f6;
+  overflow-y: scroll;
+}
+h2.pass-form-title {
+  margin-bottom: 1rem;
+}
+
+.contact-page-c0 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.contact-page-c1-right-content {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+}
+.contact-page-c1-left-shadow {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 9;
+  top: 50;
+  left: 0;
+  box-shadow: inset -2px 2px 4px black;
+}
+.contact-timeline {
+  max-width: 70%;
+  margin: auto;
+}
+h5.contact-timeline-title {
+  padding-bottom: 2rem;
+  font-size: 1.9rem;
+}
+.contact-timeline-step {
+  margin-bottom: 0.25rem;
+  vertical-align: center;
+  align-content: center;
+  vertical-align: middle;
+}
+span.contact-disclaimer-text {
+  float: bottom left;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+p.contact-timeline-step-text {
+  font-size: 1.2rem;
+  align-self: baseline;
+  justify-items: flex-end;
+}
+.contact-timeline-step-number {
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.contact-form > button {
+  margin-bottom: 1rem;
+}
+.contact-or-horizontal-line {
+  height: 1px;
+  width: 100%;
+  background-color: #c6cacc;
+  vertical-align: center;
+  align-self: center;
+  justify-items: center;
+  margin: auto;
+}
+
+span.contact-or {
+  display: flex;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.contact-or-container {
+  margin-bottom: 1rem;
+}
+
+button.google-sign-button {
+  background-color: white;
+  border: 1px solid #d1d3d4;
+  color: #283593;
+}
+button.contact-sign-button {
+  width: 75%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+span.contact-phone-explainer {
+  position: relative;
+  top: -1rem;
+  font-weight: 500;
+  color: #6d6d6d;
+  font-size: 0.75rem;
+}
+@media only screen and (max-width: 800px) {
+  .contact-page-c1-right {
+    width: 100%;
+    height: 100%;
+  }
+  .contact-page-c1-left {
+    display: none;
+  }
+  .contact-page-c1-left-shadow {
+    display: none;
+  }
+}

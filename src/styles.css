@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&family=Lato&family=Vollkorn&display=swap");
+.page-root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: column;
+}
+
+span.teal-highlight {
+  background-image: url("./images/text-decoration/teal-highlight.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+#menu-
+  > div.MuiPaper-root-1121.MuiMenu-paper-1041.MuiPopover-paper-1044.MuiPaper-rounded-1122
+  > ul
+  > li {
+  line-height: 3rem;
+  color: #6d6d6d;
+}
+
+.home-title span.word-highlight {
+  border-bottom: 1px solid #d8dbe8;
+  box-shadow: 0px -10px 0px #d8dbe8 inset;
+}
+
+div.header {
+  height: 4rem;
+  background-color: white;
+}
+
+body {
+  max-width: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
