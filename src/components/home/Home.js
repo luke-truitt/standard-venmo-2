@@ -22,17 +22,27 @@ import { useHistory, useLocation } from "react-router-dom";
 import Header from "../header/Header";
 import React, { useRef, useState, useEffect, forwardRef } from "react";
 // import { PageView, initGA, Event } from "../tracking/Tracking";
-
+import * as emailjs from "emailjs-com";
 import ben from "./../../images/home/ben.png";
-// const trackingId = "UA-189058741-1";
 const {
   REACT_APP_API_BASE_URL,
   REACT_APP_WAITLIST_URL,
   REACT_APP_CALCULATOR_URL,
+  REACT_APP_EMAILJS_USER_ID, 
+  REACT_APP_EMAILJS_SERVICE_ID,
+  REACT_APP_PAGE_ID
 } = process.env;
+
+const USER_ID = REACT_APP_EMAILJS_USER_ID;
+const TEMPLATE_ID = "template_b3u2bhe";
+const SERVICE_ID = REACT_APP_EMAILJS_SERVICE_ID;
+const PAGE_ID = REACT_APP_PAGE_ID;
+// const trackingId = "UA-189058741-1";
+
 
 function Home(props) {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [invalid, setInvalid] = useState(false);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -59,13 +69,6 @@ function Home(props) {
       }
     }
   };
-  const signUp = () => {
-    if (email.includes("@") && email.length > 6) {
-      navTo();
-    } else {
-      invalidClick();
-    }
-  };
   useEffect(() => {
     // initGA(trackingId);
     // // Mixpanel.track("visit_home");
@@ -73,9 +76,11 @@ function Home(props) {
   }, []);
 
   const navTo = () => {
-    Event("SIGNUP", "User Signed Up", "LANDING_PAGE");
-    setLoading(true);
+    // Event("SIGNUP", "User Signed Up", "LANDING_PAGE");
+    // setLoading(true);
     addEmail(email);
+    setEmail('');
+    setMessage('Successfully Registered!');
   };
 
   const invalidClick = () => {
@@ -97,51 +102,23 @@ function Home(props) {
   const Transition = forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
   });
-  function AlertDialog(props) {
-    return (
-      <div>
-        <Dialog
-          open={props.open}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={props.handleClose}
-          aria-labelledby="alert-dialog-slide-title"
-          aria-describedby="alert-dialog-slide-description"
-        >
-          <DialogTitle id="alert-dialog-slide-title">Account Found</DialogTitle>
-          <DialogContent>
-            <DialogContentText id="alert-dialog-slide-description">
-              That email is already associated with an account, would you like
-              to sign in?
-            </DialogContentText>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={() => props.handleClose("no")} color="secondary">
-              No Thanks
-            </Button>
-            <Button onClick={() => props.handleClose("yes")} color="secondary">
-              Sign In
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-    );
-  }
 
   const addEmail = async (email) => {
     // const old_user = await findUserByEmail(email);
       axios
         .post(REACT_APP_API_BASE_URL + REACT_APP_WAITLIST_URL, {
           email: email,
+          landingPageId: PAGE_ID
         })
         .then(function (response) {
-          const referToId = response.data.referId;
-          props.setReferTo(referToId);
-          // Mixpanel.identify(referToId);
-          // Mixpanel.people.set({ $email: email });
-          // Mixpanel.track("waitlist_joined");
-          // Mixpanel.people.set_once({ sign_up_date: new Date() });
-          setLoading(false);
+          const templateParams = {
+          to_email: email,
+          };
+        
+          emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, USER_ID).then(
+            function (response) {},
+            function (error) {}
+          );
         })
         .catch(function (error) {});
     } 
@@ -149,7 +126,7 @@ function Home(props) {
   return (
     <ThemeProvider theme={primaryTheme}>
       <div className="page-root row-container">
-        <Header signUp={signUp} page={"Home"} />
+        <Header/>
         <Fade in {...fadeDefault}>
           <div className="home-c0 column-container">
             <div className="home-c1 row-container">
@@ -195,13 +172,11 @@ function Home(props) {
                 className="home-caption"
               >
                 <strong>
-                  We have a team of tax experts to make sure nothing is left on
-                  the table.{" "}
+                  {message}
                 </strong>
               </Typography>
             </div>
             <img src={ben} className="home-ben"></img>
-            {/* <AlertDialog open={open} handleClose={handleClose} /> */}
           </div>
         </Fade>
       </div>
