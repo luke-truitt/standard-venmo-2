@@ -1,5 +1,5 @@
 import "../../global.css";
-import "./Home.css";
+import "./home.css";
 import { Box, Typography, TextField, Button } from "@material-ui/core";
 import mockup from "../../resources/images/mockup-lottery.png";
 import headerLogo from "../../resources/images/logo-light.svg";
