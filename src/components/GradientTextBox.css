@@ -18,10 +18,11 @@
 }
 
 .gradient-text-box {
-  width: 20vw;
-  height: 10vw;
+  width: 250px;
+  height: 115px;
+  padding: 10px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   align-items: center;
   display: flex;
 }
@@ -34,4 +35,42 @@
 }
 .gradient-text-box-title {
   padding-bottom: 0.5rem;
+}
+
+h6.gradient-text-box-title {
+  font-size: 1rem;
+}
+.gradient-text-box-body {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 1020px) {
+  .gradient-text-box {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-size:0;
+    background-color: black;
+    border-radius: 3px;
+    border-color: #6600E8;
+    border-width: 3px;
+    border-style: solid;
+  }
+
+  .gradient-text-box-content {
+    width: 90% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .gradient-text-box {
+    width: 80vw !important;
+    height: 40vw !important;
+    margin-bottom: 10vw !important;
+    margin: auto;
+  }
+
+  .gradient-text-box-content {
+    width: 90% !important;
+  }
 }

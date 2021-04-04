@@ -2,7 +2,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 export const v1Theme = createMuiTheme({
   typography: {
-    fontFamily: ["-apple-system"],
+    fontFamily: ["-apple-system", "BlinkMacSystemFont", "sans-serif"],
     h1: {
       fontWeight: 600,
     },

@@ -2,7 +2,12 @@ div .app {
   width: 100vw;
   height: 210vh;
   overflow: hidden;
-  background-image: linear-gradient(#cc00ff, #000000);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 800px) {
+  div .app {
+    height: auto !important;
+  }
 }

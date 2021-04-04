@@ -1,5 +1,9 @@
+div .app {
+  background-image: linear-gradient(#6600e8, #000000) !important;
+}
+
 .wallet-home {
-  padding-top: 2vw;
+  padding-top: 5vh;
 }
 .wallet-home-header {
   height: 10vh;
@@ -11,32 +15,28 @@
   padding-left: 5vw;
 }
 .wallet-home-landing-container {
-  justify-content: space-between;
-  padding-right: 5vw;
+  justify-content: flex-start;
   height: 90vh;
   padding-left: 5vw;
   /* background-color: yellow; */
-}
-div .app {
-  background-image: linear-gradient(#6600e8, #000000);
 }
 
 .wallet-home-text {
   align-self: flex-start;
   padding-top: 20vh;
-  width: 40%;
-  /* background-color: blue; */
+  padding-right: 10vw;
+  width: 40vw;
 }
 
-.wallet-home-mockup {
+img.wallet-home-mockup {
   align-self: flex-start;
-  height: 90%;
-  /* background-color: red; */
-  /* display: block; */
+  width: auto;
+  height: auto;
+  max-height: 90vh;
 }
 
 .explainer-container {
-  background-image: url("/src/resources/images/explainer-bg-purple.svg");
+  background-image: url("/src/resources/images/explainer-bg-purple-web.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -64,4 +64,79 @@ div .app {
 
 .wallet-home-footer .email-input-container {
   padding-top: 0 !important;
+}
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    text-align: center !important;
+  }
+
+  .explainer-container-content {
+    height: auto !important;
+    width: 90vw !important;
+  }
+  .wallet-home-text {
+    width: 90vw !important;
+    padding-right: 0 !important;
+    padding-bottom: 5vh;
+  }
+  .wallet-home-landing-container {
+    flex-direction: column !important;
+  }
+
+  .wallet-home-mockup {
+    width: 110vw !important;
+    margin-right: -5vw !important;
+    margin-left: -7.5vw !important;
+    max-height: none !important;
+  }
+  .wallet-home-landing-container {
+    height: auto !important;
+  }
+  .explainer-container {
+    height: auto !important;
+    background-size: 100% auto !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -25vh;
+    background-image: url("/src/resources/images/explainer-bg-purple-mobile.svg") !important;
+  }
+  .explainer-text-boxes {
+    flex-direction: column !important;
+    padding-bottom: 25vh;
+  }
+  .explainer-title {
+    padding-bottom: 10vw !important;
+  }
+  h3.explainer-title {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+  .wallet-home-footer {
+    padding-top: 5vw;
+    width: 90vw !important;
+  }
+  h2.wallet-home-text-title {
+    font-size: 3rem !important;
+  }
+  .wallet-home-text {
+    padding-top: 10vh !important;
+  }
+  .wallet-home-header {
+    height: 5vh !important;
+  }
+  img.wallet-home-header-logo {
+    height: 60% !important;
+    opacity: 50%;
+  }
+  .waitlist-button-web-text {
+    display: none !important;
+  }
+  input {
+    height: 2vh !important;
+  }
+  label {
+    margin-top: -0.1rem !important;
+  }
 }
