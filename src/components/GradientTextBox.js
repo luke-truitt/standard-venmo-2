@@ -10,14 +10,14 @@ function GradientTextBox(props) {
       <Box className="gradient-text-box-content rows">
         <Typography
           className="gradient-text-box-title"
-          variant="h6"
+          variant="h4"
           color="primary"
         >
-          {props.number} {props.title}
+          {props.title}
         </Typography>
         <Typography
           className="gradient-text-box-body"
-          variant="body"
+          variant="h6"
           color="primary"
         >
           {props.body}

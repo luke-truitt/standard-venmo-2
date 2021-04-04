@@ -31,21 +31,21 @@ function Home() {
   const explainerText = [
     {
       number: 1,
-      title: "A title is what happens",
+      title: "Deposit money",
       body:
-        "nd then heres an explanation of what really happens. Everything goes wow.",
+        "We transfer it to the safest digital currency so you don’t need to worry about fees or volatility.",
     },
     {
       number: 2,
-      title: "A title is what happens",
+      title: "Earn interest",
       body:
-        "nd then heres an explanation of what really happens. Everything goes wow.",
+        "Your deposited money will earn you 4% interest while you leave it in your account.",
     },
     {
       number: 3,
-      title: "A title is what happens",
+      title: "Dive in",
       body:
-        "nd then heres an explanation of what really happens. Everything goes wow.",
+        "We have provided easy ways for you to learn and trade crypto while earning money.",
     },
   ];
   const keyDown = (e, val) => {
@@ -125,18 +125,18 @@ function Home() {
       <Box className="wallet-home-landing-container columns">	
         <Box className="wallet-home-text rows">
           <Typography 
-          variant="h2"		
+          variant="h4"		
           className="wallet-home-text-title"		
           color="primary"
           >
             The simplest intro to crypto
           </Typography>
           <EmailInput buttonLabel={buttonLabel}  invalid={invalid} onKeyPress={(e, val) => keyDown(e, val)} submitEmail={submitEmail} emailValue={email} setEmail={setEmail} invalidClick={invalidClick}/>
-          <Typography variant="h5" color="primary">
+          <Typography variant="body" color="primary">
             {message}
           </Typography>
-          <Typography variant="h5" color="primary">
-            Store crypto and earn interest. No fees.
+          <Typography variant="h6" color="primary">
+          Nearly everyone is missing out on the benefits of crypto because it’s so complex. We make it simple to get started and pay you to learn .
           </Typography>
         </Box>{" "}
         <Fade top>

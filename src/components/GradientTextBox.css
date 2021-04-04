@@ -1,4 +1,4 @@
-.pink-1 {
+/* .pink-1 {
   background-image: url("/src/resources/images/gradient-text-box/pink-1.svg");
 }
 .pink-2 {
@@ -15,51 +15,40 @@
 }
 .purple-3 {
   background-image: url("/src/resources/images/gradient-text-box/purple-3.svg");
-}
+} */
 
 .gradient-text-box {
-  width: 250px;
-  height: 115px;
+  text-align: center;
+  width: 25vw;
+  height: auto;
   padding: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: black;
+  border-radius: 3px;
+  border-color: #6600E8;
+  border-width: 6px;
+  border-style: solid;
   align-items: center;
   display: flex;
+  margin: 10px;
 }
+
 .gradient-text-box-content {
-  width: 80%;
+  width: 90%;
   margin: auto;
   vertical-align: center;
   justify-self: center;
   align-self: center;
 }
+
 .gradient-text-box-title {
   padding-bottom: 0.5rem;
 }
 
-h6.gradient-text-box-title {
-  font-size: 1rem;
+h4.gradient-text-box-title {
+  margin-bottom: 2vh;
 }
-.gradient-text-box-body {
+h6.gradient-text-box-body {
   font-size: 0.9rem;
-}
-
-@media only screen and (max-width: 1020px) {
-  .gradient-text-box {
-    width: 200px;
-    height: auto;
-    padding: 10px;
-    background-size:0;
-    background-color: black;
-    border-radius: 3px;
-    border-color: #6600E8;
-    border-width: 3px;
-    border-style: solid;
-  }
-
-  .gradient-text-box-content {
-    width: 90% !important;
-  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -69,8 +58,14 @@ h6.gradient-text-box-title {
     margin-bottom: 10vw !important;
     margin: auto;
   }
-
   .gradient-text-box-content {
     width: 90% !important;
+  }
+  h4.gradient-text-box-title {
+    margin-bottom: 2vh;
+    font-size: 7vw
+  }
+  h6.gradient-text-box-body {
+    font-size: 4vw;
   }
 }
