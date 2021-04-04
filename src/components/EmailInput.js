@@ -93,6 +93,7 @@ const EmailTextField = props.invalid ? (
       boxShadow: "none",
       overflow: "hidden",
       borderRadius: 5,
+      height: "58px",
       color: buttonTextColor,
       backgroundColor: buttonBackgroundColor,
       "&:hover": {
