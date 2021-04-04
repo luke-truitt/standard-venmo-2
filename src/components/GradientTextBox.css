@@ -1,0 +1,37 @@
+.pink-1 {
+  background-image: url("/src/resources/images/gradient-text-box/pink-1.svg");
+}
+.pink-2 {
+  background-image: url("/src/resources/images/gradient-text-box/pink-2.svg");
+}
+.pink-3 {
+  background-image: url("/src/resources/images/gradient-text-box/pink-3.svg");
+}
+.purple-1 {
+  background-image: url("/src/resources/images/gradient-text-box/purple-1.svg");
+}
+.purple-2 {
+  background-image: url("/src/resources/images/gradient-text-box/purple-2.svg");
+}
+.purple-3 {
+  background-image: url("/src/resources/images/gradient-text-box/purple-3.svg");
+}
+
+.gradient-text-box {
+  width: 20vw;
+  height: 10vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+}
+.gradient-text-box-content {
+  width: 80%;
+  margin: auto;
+  vertical-align: center;
+  justify-self: center;
+  align-self: center;
+}
+.gradient-text-box-title {
+  padding-bottom: 0.5rem;
+}

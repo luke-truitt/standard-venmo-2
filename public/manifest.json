@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Standard Wallet",
+  "name": "Simplest intro to crypto with Standard Wallet",
   "icons": [
     {
       "src": "favicon.ico",

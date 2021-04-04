@@ -1,108 +1,64 @@
-.home-c0 {
-  width: 100%;
+.lottery-home {
+  padding-top: 2vw;
+}
+.lottery-home-header {
+  height: 10vh;
+}
+
+.lottery-home-header-logo {
+  padding-bottom: 5vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+.lottery-home-landing-container {
   justify-content: space-between;
+  padding-right: 5vw;
+  height: 90vh;
+  padding-left: 5vw;
+  /* background-color: yellow; */
+}
+
+.lottery-home-text {
+  align-self: flex-start;
+  padding-top: 20vh;
+  width: 40%;
+  /* background-color: blue; */
+}
+
+.lottery-home-mockup {
+  align-self: flex-start;
+  height: 90%;
+  /* background-color: red; */
+  /* display: block; */
+}
+
+.explainer-container {
+  background-image: url("/src/resources/images/explainer-bg-pink.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 90vh;
+}
+.explainer-container-content {
+  justify-content: space-between;
+  width: 80vw;
   margin: auto;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
+  height: 40vh;
+  padding-top: 10vh;
 }
 
-.home-c1 {
-  width: 100%;
-  max-width: 550px;
-  margin-left: 4rem;
-  margin-right: -2rem;
-  justify-content: center;
-  background-color: transparent;
+.explainer-title {
+  padding-right: 5vw;
 }
-h2.home-title {
-  margin-bottom: 2rem;
-  text-align: left;
-  line-height: 4rem;
-  font-size: 4rem;
-  font-weight: 400;
+.explainer-text-boxes {
+  justify-content: space-between;
+}
+.lottery-home-footer {
+  width: 50vw;
+  margin: auto;
 }
 
-span.home-web-button-text {
-  font-size: 1rem;
-}
-p.home-subtitle-lower {
-  text-align: left;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  line-height: 1.4rem;
-}
-p.home-subtitle-upper {
-  text-align: left;
-  font-size: 0.8rem;
-  margin-bottom: 3rem;
-}
-
-div.home-c1.row-container > div > div > div > fieldset {
-  border-color: #283596;
-}
-
-span.home-mobile-button-text {
-  display: none;
-}
-.home-label {
-  padding-bottom: 8vh;
-}
-img.home-ben {
-  height: auto;
-  max-width: 50%;
-  align-self: flex-end;
-  z-index: -5;
-  bottom: 0;
-}
-span.teal-highlight {
-  background-position-y: 95% !important;
-}
-.home-c1 > div.embedded-email-input-container {
-  margin-bottom: 3rem;
-}
-
-div.home-c1.row-container > div > div > div > fieldset > legend > span {
-  font-size: 0.9rem;
-}
-
-@media only screen and (max-width: 800px) {
-  span.teal-highlight {
-    background-position-y: 95% !important;
-    background-size: auto 20%;
-  }
-  div.home-c1 {
-    margin: auto;
-    width: 90%;
-  }
-  div.home-c0 {
-    padding-top: 7rem;
-    flex-direction: column;
-    height: auto;
-    overflow-y: scroll;
-  }
-
-  h2.home-title {
-    text-align: center;
-    font-size: 2.4rem;
-    line-height: 2.6rem;
-  }
-  p.home-subtitle-lower {
-    text-align: center;
-    font-size: 0.9rem;
-  }
-
-  .home-ben {
-    margin: auto;
-    margin-top: 2rem;
-    min-width: 100%;
-  }
-  span.home-web-button-text {
-    display: none;
-  }
-  span.home-mobile-button-text {
-    display: block;
-    font-size: 1rem;
-  }
+.lottery-home-footer .email-input-container {
+  padding-top: 0 !important;
 }
