@@ -67,7 +67,6 @@ img.wallet-home-mockup {
   padding-top: 0 !important;
 }
 
-
 @media only screen and (max-width: 800px) {
   body {
     text-align: center !important;
@@ -133,11 +132,5 @@ img.wallet-home-mockup {
   }
   .waitlist-button-web-text {
     display: none !important;
-  }
-  input {
-    height: 2vh !important;
-  }
-  label {
-    margin-top: -0.1rem !important;
   }
 }
