@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { TextField, Button, Box } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import "../global.css";
@@ -14,7 +14,7 @@ function EmailInput(props) {
   const [valid, setValid] = useState(false);
 
   const checkValid = (mail) => {
-    console.log("HEY")
+    console.log("HEY");
     if (
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
         mail
@@ -52,40 +52,23 @@ function EmailInput(props) {
     },
   }));
   const classes = useTextFieldStyles();
-const EmailTextField = props.invalid ? (
+  const EmailTextField = (
     <TextField
-    error
-    helperText="Please enter a valid email."
-    variant="filled"
-    label={textFieldLabel}
-    className="email-input-text-field"
-    value={props.emailValue} 
-    onChange={(e) => {
-      props.setEmail(e.target.value);
-      checkValid(e.target.value);
-    }}
-    InputProps={{
-      classes: { root: classes.inputRoot },
-      disableUnderline: true,
-    }}
-    InputLabelProps={{ classes: { root: classes.labelRoot } }}
-    {...props}
-  />
-  ) : (
-    <TextField
-  variant="filled"
-  label={textFieldLabel}
-  className="email-input-text-field"
-  value={props.emailValue} 
-  onChange={(e) => {props.setEmail(e.target.value);
-    checkValid(e.target.value);}}
-  InputProps={{
-    classes: { root: classes.inputRoot },
-    disableUnderline: true,
-  }}
-  InputLabelProps={{ classes: { root: classes.labelRoot } }}
-  {...props}
-/>
+      variant="filled"
+      label={textFieldLabel}
+      className="email-input-text-field"
+      value={props.emailValue}
+      onChange={(e) => {
+        props.setEmail(e.target.value);
+        checkValid(e.target.value);
+      }}
+      InputProps={{
+        classes: { root: classes.inputRoot },
+        disableUnderline: true,
+      }}
+      InputLabelProps={{ classes: { root: classes.labelRoot } }}
+      {...props}
+    />
   );
   const StyledButton = withStyles(() => ({
     root: {
@@ -104,7 +87,12 @@ const EmailTextField = props.invalid ? (
 
   function EmailButton(props) {
     return (
-      <StyledButton className="email-input-button" variant="filled" onClick={valid ? props.submitEmail : props.invalidClick} {...props}>
+      <StyledButton
+        className="email-input-button"
+        variant="filled"
+        onClick={valid ? props.submitEmail : props.invalidEmail}
+        {...props}
+      >
         {buttonLabel}
       </StyledButton>
     );
@@ -113,7 +101,7 @@ const EmailTextField = props.invalid ? (
   return (
     <Box className="email-input-container columns">
       {EmailTextField}
-      <EmailButton {...props}/>
+      <EmailButton {...props} />
     </Box>
   );
 }
