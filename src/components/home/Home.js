@@ -14,7 +14,7 @@ import GradientTextBox from "../GradientTextBox";
 import Fade from "react-reveal/Fade";
 import React, { useState, useEffect } from "react";
 import * as emailjs from "emailjs-com";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -47,7 +47,7 @@ function Home() {
       number: 1,
       title: "Deposit money",
       body:
-        "Deposite your money and we'll convert it into a stable digtal coin which generates interest",
+        "Deposit your money and we'll convert it into a stable digtal coin which generates interest",
     },
     {
       number: 2,
@@ -80,8 +80,8 @@ function Home() {
     }
   };
   const useEffect = () => {
-    ReactGA.pageview('/');
-  }
+    ReactGA.pageview("/");
+  };
   const addEmail = async (email) => {
     axios
       .post(REACT_APP_API_BASE_URL + REACT_APP_WAITLIST_URL, {
@@ -117,8 +117,8 @@ function Home() {
       setErrorMessage(false);
     }
     ReactGA.event({
-      category: 'User',
-      action: 'Signed Up For Waitlist'
+      category: "User",
+      action: "Signed Up For Waitlist",
     });
     setErrorMessage(false);
     setSuccessMessage(true);
