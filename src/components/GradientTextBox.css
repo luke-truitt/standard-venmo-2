@@ -19,51 +19,70 @@
 
 .gradient-text-box {
   text-align: center;
-  width: 25vw;
-  height: auto;
-  padding: 10px;
-  background-color: black;
-  border-radius: 3px;
-  border-color: #6600E8;
-  border-width: 6px;
-  border-style: solid;
-  align-items: center;
-  display: flex;
-  margin: 10px;
-}
+  width: 20vw;
+  height: 20vw;
+  flex: 1;
+  padding: 5%;
+  border-radius: 10px !important;
+  border: 0.5px #322885 solid;
+  background-color: rgba(242, 239, 242) !important;
 
+  text-align: left;
+  display: flex;
+  margin: 1rem;
+}
+.gradient-text-box-number {
+  font-size: 4rem !important;
+  color: #817d93 !important;
+  font-weight: 800;
+  opacity: 30%;
+}
 .gradient-text-box-content {
   width: 90%;
-  margin: auto;
-  vertical-align: center;
-  justify-self: center;
-  align-self: center;
+  justify-content: flex-start !important;
+  vertical-align: top !important;
+  color: #817d93 !important;
+  padding: 1rem im !important;
+}
+.gradient-text-box-body {
+  color: #322885 !important;
+  font-size: 1rem;
 }
 
-.gradient-text-box-title {
+.gradient-text-box-dash {
+  color: #817d93 !important;
+  font-size: 1rem;
   padding-bottom: 0.5rem;
+}
+.gradient-text-box-title {
+  color: #322885 !important;
+  padding-bottom: 1rem;
+}
+.gradient-text-box-title-text {
+  vertical-align: top;
 }
 
 h4.gradient-text-box-title {
   margin-bottom: 2vh;
 }
 h6.gradient-text-box-body {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 800px) {
   .gradient-text-box {
     width: 80vw !important;
-    height: 40vw !important;
+    height: 70vw !important;
     margin-bottom: 10vw !important;
     margin: auto;
+    max-height: 50vh;
   }
   .gradient-text-box-content {
-    width: 90% !important;
+    width: 100% !important;
   }
   h4.gradient-text-box-title {
     margin-bottom: 2vh;
-    font-size: 7vw
+    font-size: 7vw;
   }
   h6.gradient-text-box-body {
     font-size: 4vw;

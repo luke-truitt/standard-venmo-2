@@ -1,6 +1,6 @@
 div .app {
   width: 100vw;
-  height: 210vh;
+  height: 200vh !important;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;

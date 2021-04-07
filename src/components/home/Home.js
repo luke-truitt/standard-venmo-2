@@ -1,8 +1,14 @@
 import "../../global.css";
-import "./home.css";
-import { Snackbar, Box, Typography } from "@material-ui/core";
-import mockup from "../../resources/images/mockup-wallet.png";
-import headerLogo from "../../resources/images/logo-light.svg";
+import "./Home.css";
+import {
+  Snackbar,
+  Box,
+  Typography,
+  TextField,
+  Button,
+} from "@material-ui/core";
+import mockup from "../../resources/images/mockup-payment.png";
+import headerLogo from "../../resources/images/logo-purple.svg";
 import EmailInput from "../EmailInput";
 import GradientTextBox from "../GradientTextBox";
 import Fade from "react-reveal/Fade";
@@ -35,25 +41,24 @@ function Home() {
 
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
-
   const explainerText = [
     {
       number: 1,
       title: "Deposit money",
       body:
-        "We transfer it to the safest digital currency so you don’t need to worry about fees or volatility.",
+        "Deposite your money and we'll convert it into a stable digtal coin which generates interest",
     },
     {
       number: 2,
-      title: "Earn interest",
+      title: "Earn more",
       body:
-        "Your deposited money will earn you 4% interest while you leave it in your account.",
+        "Earn more interest as you transact via Boosts. Receive up to 50x the national savings average!",
     },
     {
       number: 3,
-      title: "Dive in",
+      title: "Pay friends",
       body:
-        "We have provided easy ways for you to learn and trade crypto while earning money.",
+        "Immediately and cheaply send your digital money around while earning you an awesome interest rate",
     },
   ];
   const keyDown = (e, val) => {
@@ -95,7 +100,6 @@ function Home() {
         console.log(error);
       });
   };
-
   const submitEmail = () => {
     // setLoading(true);
     if (email.length > 0) {
@@ -114,7 +118,7 @@ function Home() {
   const ExplainerTextBoxes = explainerText.map((step) => (
     <Fade top>
       <GradientTextBox
-        color="purple"
+        color="pink"
         number={step.number}
         title={step.title}
         body={step.body}
@@ -138,7 +142,7 @@ function Home() {
     setErrorMessage(true);
   };
   return (
-    <Box className="wallet-home rows">
+    <Box className="lottery-home rows">
       <Snackbar
         open={successMessage}
         autoHideDuration={3000}
@@ -165,17 +169,17 @@ function Home() {
           Please enter a valid email.
         </Alert>
       </Snackbar>
-      <Box className="wallet-home-header">
-        <img className="wallet-home-header-logo" src={headerLogo} />
+      <Box className="lottery-home-header">
+        <img className="lottery-home-header-logo" src={headerLogo} />
       </Box>
-      <Box className="wallet-home-landing-container columns">
-        <Box className="wallet-home-text rows">
+      <Box className="lottery-home-landing-container columns">
+        <Box className="lottery-home-text rows">
           <Typography
-            variant="h4"
-            className="wallet-home-text-title"
+            variant="h3"
+            className="lottery-home-text-title"
             color="primary"
           >
-            The simplest intro to crypto
+            Earn interest in the same place you send money
           </Typography>
           <EmailInput
             buttonLabel={buttonLabel}
@@ -185,33 +189,36 @@ function Home() {
             setEmail={setEmail}
             invalidEmail={showError}
           />
-          <Typography variant="h6" color="primary">
-            Nearly everyone is missing out on the benefits of crypto because
-            it’s so complex. We make it simple to get started and pay you to
-            learn .
+          <Typography
+            className="lottery-home-subtitle"
+            variant="body"
+            color="primary"
+          >
+            With digital finance you can earn interest on money for even just a
+            few hours
           </Typography>
         </Box>{" "}
         <Fade top>
-          <img src={mockup} className="wallet-home-mockup" />{" "}
+          <img src={mockup} className="lottery-home-mockup" />{" "}
         </Fade>
       </Box>
       <Box className="explainer-container">
         <Box className="explainer-container-content rows">
-          <Fade top>
+          {/* <Fade top>
             <Typography
               className="explainer-title"
-              variant="h3"
+              variant="h6"
               color="primary"
             >
               How does it work?
             </Typography>
-          </Fade>
+          </Fade> */}
           <Box className="explainer-text-boxes columns">
             {ExplainerTextBoxes}
           </Box>
         </Box>
       </Box>
-      <Box className="wallet-home-footer">
+      <Box className="lottery-home-footer">
         <EmailInput
           buttonLabel={buttonLabel}
           onKeyPress={(e, val) => keyDown(e, val)}

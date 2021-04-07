@@ -10,7 +10,7 @@ function EmailInput(props) {
   const inputTextColor = v1Theme.palette.primary.main;
   const inputBackgroundColor = "transparent";
   const buttonBackgroundColor = v1Theme.palette.secondary.main;
-  const buttonTextColor = v1Theme.palette.primary.main;
+  const buttonTextColor = v1Theme.palette.primary.contrastText;
   const [valid, setValid] = useState(false);
 
   const checkValid = (mail) => {
