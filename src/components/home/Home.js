@@ -8,6 +8,7 @@ import GradientTextBox from "../GradientTextBox";
 import Fade from "react-reveal/Fade";
 import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
+import ReactGA from 'react-ga';
 const {
   REACT_APP_API_BASE_URL,
   REACT_APP_WAITLIST_URL,
@@ -90,6 +91,7 @@ function Home() {
     };
   const submitEmail = () => {
     // setLoading(true);
+    
     if(email.length > 0) {
       addEmail(email);
       setEmail('');
@@ -100,6 +102,10 @@ function Home() {
       setEmail2('');
       setInvalid(false);
     }
+    ReactGA.event({
+      category: 'User',
+      action: 'Signed Up For Waitlist'
+    });
     setMessage('Successfully Registered!');
   };
   const ExplainerTextBoxes = explainerText.map((step) => (
