@@ -1,5 +1,5 @@
 import "../../global.css";
-import "./Home.css";
+import "./home.css";
 import {
   Snackbar,
   Box,
