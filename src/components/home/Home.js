@@ -7,7 +7,7 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
-import mockup from "../../resources/images/mockup-payment.png";
+import mockup from "../../resources/images/mockup-wallet.png";
 import headerLogo from "../../resources/images/logo-purple.svg";
 import EmailInput from "../EmailInput";
 import GradientTextBox from "../GradientTextBox";
@@ -42,24 +42,25 @@ function Home() {
 
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
+
   const explainerText = [
     {
       number: 1,
       title: "Deposit money",
       body:
-        "Deposite your money and we'll convert it into a stable digtal coin which generates interest",
+        "We transfer it to the safest digital currency so you don’t need to worry about fees or volatility",
     },
     {
       number: 2,
-      title: "Earn more",
+      title: "Earn interest",
       body:
-        "Earn more interest as you transact via Boosts. Receive up to 50x the national savings average!",
+        "Your deposited money will earn you 4% interest while you leave it in your account",
     },
     {
       number: 3,
-      title: "Pay friends",
+      title: "Dive in",
       body:
-        "Immediately and cheaply send your digital money around while earning you an awesome interest rate",
+        "We have provided easy ways for you to learn and trade crypto while earning money",
     },
   ];
   const keyDown = (e, val) => {
@@ -187,7 +188,7 @@ function Home() {
             className="lottery-home-text-title"
             color="primary"
           >
-            Earn interest in the same place you send money
+            Get started in crypto in 5 minutes
           </Typography>
           <EmailInput
             buttonLabel={buttonLabel}
@@ -202,8 +203,8 @@ function Home() {
             variant="body"
             color="primary"
           >
-            With digital finance you can earn interest on money for even just a
-            few hours
+            Walkthroughs to get started and go deeper, all integrated with your
+            bank and Apple Pay
           </Typography>
         </Box>{" "}
         <Fade top>
