@@ -6,7 +6,7 @@ import headerLogo from "../../resources/images/logo-light.svg";
 import EmailInput from "../EmailInput";
 import GradientTextBox from "../GradientTextBox";
 import Fade from "react-reveal/Fade";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as emailjs from "emailjs-com";
 import ReactGA from 'react-ga';
 import MuiAlert from "@material-ui/lab/Alert";
@@ -74,6 +74,9 @@ function Home() {
       }
     }
   };
+  const useEffect = () => {
+    ReactGA.pageview('/');
+  }
   const addEmail = async (email) => {
     axios
       .post(REACT_APP_API_BASE_URL + REACT_APP_WAITLIST_URL, {
