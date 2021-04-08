@@ -134,7 +134,7 @@ img.lottery-home-mockup {
   }
   img.lottery-home-header-logo {
     height: 60% !important;
-    opacity: 50%;
+    opacity: 0.5;
   }
   .waitlist-button-web-text {
     display: none !important;
